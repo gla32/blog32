@@ -9,22 +9,85 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\nGilbert was here creating the blog"
+    "text": "Welcome to my blog!"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "objectID": "posts/welcome/index.html#introduction",
+    "href": "posts/welcome/index.html#introduction",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Introduction",
+    "text": "Introduction\nMachine learning is a dynamic and evolving field that seamlessly bridges mathematics, computing, and real-world challenges. In this blog, I’ll share my approach to predicting house prices using Ridge Regression, a robust linear model. My objective is to demonstrate how machine learning, paired with a deep understanding of data techniques, can uncover practical and actionable insights into complex problems.\nWe began by addressing a fundamental question: Can predicting house prices offer value to various stakeholders? The answer was a resounding yes. A predictive model not only provides an estimation of property values but also highlights the key factors driving those values, offering insights for homeowners, buyers, and policymakers alike.\nTo achieve this, we utilized the publicly available 2023 Property Tax Assessment dataset from Strathcona County. This dataset served as the foundation for our analysis, allowing us to build a predictive model that explores the relationship between property features and their assessed values.\nThis project will show the usefulness of machine learning in solving real-world problems by combining mathematical rigor with computational efficiency. If you’re intrigued by how these principles come together, read on to discover the fascinating process of predicting house prices using Ridge Regression!"
+  },
+  {
+    "objectID": "posts/welcome/index.html#why-predicting-house-prices",
+    "href": "posts/welcome/index.html#why-predicting-house-prices",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Why Predicting House Prices?",
+    "text": "Why Predicting House Prices?\nHousing markets are complex systems influenced by numerous factors. Accurately predicting house prices is not only a mathematical challenge but also has important implications:\n\nEconomic Trends: House prices can reflect broader economic patterns.\n\nTransparency: Accurate predictions promote trust and informed decision-making in the housing market.\n\nAffordability: Understanding price drivers can help address housing affordability issues.\n\nBy applying Ridge Regression, a method grounded in solid mathematical foundations, we sought to explore the relationships between property attributes and their market values."
+  },
+  {
+    "objectID": "posts/welcome/index.html#the-dataset",
+    "href": "posts/welcome/index.html#the-dataset",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "The Dataset",
+    "text": "The Dataset\nWe worked with the 2023 Property Tax Assessment dataset, which provided detailed attributes for each property, including:\n\nMeters: Numeric, representing property size.\n\nGarage: Binary (Y/N) for the presence of a garage.\n\nFireplace: Binary (Y/N) for having a fireplace.\n\nBasement: Binary (Y/N) for having a basement.\n\nBuilding Evaluation: Binary (Y/N) for whether the building was evaluated.\n\nOur target variable, assess_2022, represented the assessed value of each property. The dataset’s structured nature and rich feature set made it ideal for building a predictive model"
+  },
+  {
+    "objectID": "posts/welcome/index.html#why-ridge-regression",
+    "href": "posts/welcome/index.html#why-ridge-regression",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Why Ridge Regression?",
+    "text": "Why Ridge Regression?\nIn machine learning, multicollinearity—when features are highly correlated—can lead to unstable predictions. Ridge Regression, a regularized linear regression model, addresses this by adding a penalty term to the loss function, effectively shrinking the coefficients of less significant features.\nFrom a mathematical perspective, Ridge Regression minimizes:\n\\[\\text{Loss} = \\text{RSS} + \\lambda \\sum_{j=1}^{p} \\beta_j^2\\]\nWhere lambda (\\(\\lambda\\)) controls the strength of the penalty term. This helps improve model stability and ensures better generalization to unseen data."
+  },
+  {
+    "objectID": "posts/welcome/index.html#our-approach",
+    "href": "posts/welcome/index.html#our-approach",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Our Approach",
+    "text": "Our Approach\nWe followed a Data Science work flow. This is essentail because a workflow provides structure and ensures consistency throughout a project. A clear workflow acts as a roadmap, guiding you through each step systematically, which helps prevent skipping crucial tasks like data cleaning or model evaluation. It improves efficiency by reducing redundant efforts and enables reproducibility, ensuring that results can be validated or replicated by others. A workflow also aligns with the overall goal of the project. It also promotes data integrity by addressing issues like missing values and biases early in the process and facilitates effective decision-making by producing valid and actionable insights\n\n\n\nThis image shows a simplfied form of a Data Science workflow\n\n\nHere’s how we structured our process:\n\n1. Data Validation\nBefore diving into modeling, we validated the dataset to ensure:\n\nCorrect column names and data types.\n\nNo missing values or duplicate records.\n\nNo extreme outliers that could skew results.\n\n\n\n2. Exploratory Data Analysis (EDA)\nUsing tools like Altair, we visualized relationships between features and house prices:\n\nScatter plots showed a strong positive correlation between meters (property size) and assess_2022.\n\nCorrelation matrices highlighted interactions among features, such as a positive relationship between basements and building evaluations.\n\n\n\n3. Preprocessing and Feature Engineering\nWe prepared the data for modeling:\n\nNumerical Features: Standardized using a scaler to ensure uniformity.\n\nCategorical Features: One-hot encoded to convert binary variables into numerical form.\n\nColumn Transformer: Combined preprocessing steps into a single pipeline for streamlined transformation.\n\n\n\n4. Model Training\nWe split the dataset into training (70%) and testing (30%) sets. Using Scikit-learn, we implemented Ridge Regression with a pipeline that combined preprocessing and model training. The sklearn library contains a lot of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction.\n\n\n5. Model Evaluation\nWe evaluated our model using 5-fold cross-validation to ensure robustness. Metrics like R² (coefficient of determination) helped quantify how well the model explained variance in house prices.Five-fold cross-validation (CV) is a process when all data is randomly split into k folds, in our case k = 5, and then the model is trained on the k − 1 folds, while one fold is left to test a model"
+  },
+  {
+    "objectID": "posts/welcome/index.html#results-insights",
+    "href": "posts/welcome/index.html#results-insights",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Results & Insights",
+    "text": "Results & Insights\nOur Ridge Regression model achieved the following:\n\nTraining R² Score: 0.575\n\nTesting R² Score: 0.564\n\nThese results indicate the model generalizes well without significant overfitting. We also predicted prices for 10 new houses with diverse attributes. Here’s what we found:\n\nLarger houses with features like garages and fireplaces had higher predicted values.\n\nA house with 174 square meters, a garage, and a fireplace was valued at $537,035, while a smaller house with no extra features was valued at $212,530.\n\nKey Insight: Property size was the most influential feature, but additional amenities like garages and fireplaces significantly boosted value."
+  },
+  {
+    "objectID": "posts/welcome/index.html#real-world-applications",
+    "href": "posts/welcome/index.html#real-world-applications",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Real-World Applications",
+    "text": "Real-World Applications\nThis approach has applications beyond housing markets:\n\nInsurance: Predicting premiums based on property attributes.\n\nRetail: Estimating sales based on store characteristics.\n\nHealthcare: Modeling patient treatment costs based on medical history.\n\nThe principles of feature selection, preprocessing, and model evaluation are transferable across domains."
+  },
+  {
+    "objectID": "posts/welcome/index.html#engaging-with-machine-learning",
+    "href": "posts/welcome/index.html#engaging-with-machine-learning",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Engaging with Machine Learning",
+    "text": "Engaging with Machine Learning\nAs a software engineering graduate, you might enjoy experimenting with this process. Here are some ideas:\n\nVisualize Feature Relationships: Use Altair to plot scatter plots or correlation heatmaps for your own data.\n\nExplore Regularization: Experiment with different values of lambda \\((\\lambda)\\) in Ridge Regression to see how it impacts performance.\n\nTry Advanced Models: Compare Ridge Regression to tree-based models like Random Forest or Gradient Boosting."
+  },
+  {
+    "objectID": "posts/welcome/index.html#conclusion",
+    "href": "posts/welcome/index.html#conclusion",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis project demonstrates how machine learning can bridge mathematics and computing to provide actionable insights. By leveraging Ridge Regression, we built a model that not only predicts house prices but also reveals the key drivers of value.\nKey Takeaways:\n\nRidge Regression handles multicollinearity effectively, making it a great choice for structured data.\n\nPreprocessing and feature engineering are critical for model success.\n\nMachine learning is a versatile tool that can be applied to a wide range of domains."
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-next",
+    "href": "posts/welcome/index.html#what-next",
+    "title": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive",
+    "section": "What Next?",
+    "text": "What Next?\nI hope this blog inspires you to explore machine learning further. Whether it’s house prices, healthcare, or another field. This is because the possibilitie in the field of machine learning are endless."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 13, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 10, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Predicting House Prices with Machine Learning: A Graduate-Level Deep Dive\n\n\n\n\n\n\nMachine Learning\n\n\nData Science\n\n\nRidge Regression\n\n\n\n\n\n\n\n\n\nJan 13, 2025\n\n\nGilbert Akuja\n\n\n\n\n\n\nNo matching items"
   }
 ]

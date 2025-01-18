@@ -12,13 +12,13 @@ Welcome to my blog!
 
 ## Introduction  
 
-Machine learning is a dynamic and evolving field that seamlessly bridges mathematics, computing, and real-world challenges. In this blog, I’ll share my approach to predicting house prices using Ridge Regression, a robust linear model. My objective is to demonstrate how machine learning, paired with a deep understanding of data techniques, can uncover practical and actionable insights into complex problems.
+Machine learning is a field that in a way bridges mathematics, computing, and real-world challenges. In this blog, I’ll share my teams approach to predicting house prices using Ridge Regression, a robust linear model. My objective is to demonstrate how machine learning, paired with a deep understanding of data techniques, can uncover practical and actionable insights into complex problems.
 
-We began by addressing a fundamental question: Can predicting house prices offer value to various stakeholders? The answer was a resounding yes. A predictive model not only provides an estimation of property values but also highlights the key factors driving those values, offering insights for homeowners, buyers, and policymakers alike.
+We began by addressing a fundamental question: Can predicting house prices offer value to various stakeholders? The answer was a resounding yes. A predictive model not only provides an estimation of property values but also highlights the key factors driving those values, offering insights for stakeholders such as homeowners, buyers and banks. 
 
-To achieve this, we utilized the publicly available 2023 Property Tax Assessment dataset from Strathcona County. This dataset served as the foundation for our analysis, allowing us to build a predictive model that explores the relationship between property features and their assessed values.
+To achieve this, we used the publicly available 2023 Property Tax Assessment dataset from Strathcona County. This dataset served as the foundation for our analysis, allowing us to build a predictive model that explores the relationship between property features and their assessed values.
 
-This project will show the usefulness of machine learning in solving real-world problems by combining mathematical rigor with computational efficiency. If you’re intrigued by how these principles come together, read on to discover the fascinating process of predicting house prices using Ridge Regression!
+This project will show the usefulness of machine learning in solving real-world problems by combining mathematical rigor with computational efficiency. In the next sectionI will go over the process of predicitng house prices using a machine learning Ridge regresssion model. 
 
 ---
 
@@ -99,8 +99,13 @@ We evaluated our model using **5-fold cross-validation** to ensure robustness. M
 
 Our Ridge Regression model achieved the following:  
 
+
 - **Training R² Score**: 0.575  
 - **Testing R² Score**: 0.564  
+
+In ridge regression, the training score measures how well the model fits the data it was trained on. It shows how accurately the model predicts the outputs for the training dataset. A high training score means the model has learned the patterns in the training data well.
+
+The testing score evaluates how well the model performs on new, unseen data (the testing set). It tells you if the model can generalize its learning to other data. A large gap between the training and testing scores might indicate overfitting (model does well on training data but poorly on testing data) or underfitting (model does poorly on both).
 
 These results indicate the model generalizes well without significant overfitting. We also predicted prices for 10 new houses with diverse attributes. Here’s what we found:  
 
